@@ -1,0 +1,94 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Fonts/DynamicFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Menu/Planeta.png" type="Texture" id=2]
+[ext_resource path="res://Songs/Intro.wav" type="AudioStream" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 246.0
+margin_bottom = 168.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect"]
+margin_top = 128.0
+margin_right = 239.0
+margin_bottom = 142.0
+custom_fonts/font = ExtResource( 1 )
+text = "You saved the planet, the demons was
+sended back to their world
+And everybody lived happy forever"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 104, 80 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 120, 80 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 2
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 136, 80 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 4
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( 104, 96 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 6
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 120, 96 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 8
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 136, 96 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 10
+
+[node name="Sprite9" type="Sprite" parent="."]
+position = Vector2( 104, 112 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 12
+
+[node name="Sprite8" type="Sprite" parent="."]
+position = Vector2( 120, 112 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 14
+
+[node name="Sprite7" type="Sprite" parent="."]
+position = Vector2( 136, 112 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 16
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true

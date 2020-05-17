@@ -1,0 +1,154 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Boss.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Boss/Level 1.png" type="Texture" id=2]
+[ext_resource path="res://hpBarUnder.png" type="Texture" id=3]
+[ext_resource path="res://hpBarTop.png" type="Texture" id=4]
+
+[node name="Boss" type="Area2D"]
+scale = Vector2( 0.5, 1 )
+script = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Bullets" type="Node" parent="."]
+
+[node name="UI" type="Control" parent="."]
+visible = false
+margin_right = 483.0
+margin_bottom = 160.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Health" type="TextureProgress" parent="UI"]
+anchor_right = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = 25.0
+texture_under = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Node"]
+position = Vector2( 140, 32 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+
+[node name="Sprite2" type="Sprite" parent="Node"]
+position = Vector2( 172, 32 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 1
+
+[node name="Sprite3" type="Sprite" parent="Node"]
+position = Vector2( 204, 32 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 2
+
+[node name="Sprite4" type="Sprite" parent="Node"]
+position = Vector2( 236, 32 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 3
+
+[node name="Sprite5" type="Sprite" parent="Node"]
+position = Vector2( 140, 64 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 4
+
+[node name="Sprite6" type="Sprite" parent="Node"]
+position = Vector2( 172, 64 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 5
+
+[node name="Sprite7" type="Sprite" parent="Node"]
+position = Vector2( 204, 64 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 6
+
+[node name="Sprite8" type="Sprite" parent="Node"]
+position = Vector2( 236, 64 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 7
+
+[node name="Sprite9" type="Sprite" parent="Node"]
+position = Vector2( 140, 96 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 8
+
+[node name="Sprite10" type="Sprite" parent="Node"]
+position = Vector2( 172, 96 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 9
+
+[node name="Sprite11" type="Sprite" parent="Node"]
+position = Vector2( 204, 96 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 10
+
+[node name="Sprite12" type="Sprite" parent="Node"]
+position = Vector2( 236, 96 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 11
+
+[node name="Sprite13" type="Sprite" parent="Node"]
+position = Vector2( 140, 128 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 12
+
+[node name="Sprite14" type="Sprite" parent="Node"]
+position = Vector2( 172, 128 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 13
+
+[node name="Sprite15" type="Sprite" parent="Node"]
+position = Vector2( 204, 128 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 14
+
+[node name="Sprite16" type="Sprite" parent="Node"]
+position = Vector2( 172, 159.302 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 16
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 350.001, 19.7503, 300.501, 32.2503, 271.001, 58.2504, 272.501, 72.7504, 261.001, 83.2504, 278.501, 95.7505, 278.501, 103.5, 276.501, 109.25, 276.001, 127.501, 334.501, 114.75, 347.001, 124.251, 309.001, 142.501, 334.001, 160.501, 393.501, 128.251, 380.501, 103.5, 404.501, 109, 415.501, 106.5, 435.001, 112.75, 489.502, 88.2504, 488.002, 49.0003, 442.501, 24.0003, 374.001, 17.2503 )
+[connection signal="area_entered" from="." to="." method="_on_Boss_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

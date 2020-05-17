@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Fonts/DynamicFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/Items/ShootGun .png" type="Texture" id=2]
+[ext_resource path="res://Assets/Items/Life.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Items/DoubleJump.png" type="Texture" id=4]
+[ext_resource path="res://Transiction.gd" type="Script" id=5]
+
+[node name="Transiction" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 248.0
+margin_bottom = 164.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 120, 80 )
+texture = ExtResource( 4 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1280, 80 )
+texture = ExtResource( 3 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 180, 80 )
+texture = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[node name="Control" type="Control" parent="."]
+margin_right = 240.0
+margin_bottom = 160.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -36.5
+margin_top = 50.0
+margin_right = 36.5
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 1 )
+text = "You found an item"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Control"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -36.5
+margin_top = -50.0
+margin_right = 36.5
+margin_bottom = -50.0
+custom_fonts/font = ExtResource( 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

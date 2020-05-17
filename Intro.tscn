@@ -1,0 +1,393 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Menu/Lava.png" type="Texture" id=1]
+[ext_resource path="res://Menu/Planeta.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Fonts/DynamicFont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Intro.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Fonts/PixelRPG.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Songs/Intro.wav" type="AudioStream" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 10
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 5 )
+
+[sub_resource type="Animation" id=3]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 240, 0 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "start_typing"
+} ]
+}
+
+[sub_resource type="Animation" id=4]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -240, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.2, 0.2 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "next_scene"
+} ]
+}
+
+[node name="Intro" type="Node2D"]
+position = Vector2( -120, 80 )
+script = ExtResource( 4 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -390.0
+margin_top = -81.0
+margin_right = 362.0
+margin_bottom = 84.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Node"]
+position = Vector2( -136, 64 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+
+[node name="Sprite2" type="Sprite" parent="Node"]
+position = Vector2( -120, 64 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 2
+
+[node name="Sprite3" type="Sprite" parent="Node"]
+position = Vector2( -104, 64 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 4
+
+[node name="Sprite4" type="Sprite" parent="Node"]
+position = Vector2( -136, 80 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 6
+
+[node name="Sprite5" type="Sprite" parent="Node"]
+position = Vector2( -120, 80 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 8
+
+[node name="Sprite6" type="Sprite" parent="Node"]
+position = Vector2( -104, 80 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 10
+
+[node name="Sprite7" type="Sprite" parent="Node"]
+position = Vector2( -136, 96 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 12
+
+[node name="Sprite8" type="Sprite" parent="Node"]
+position = Vector2( -120, 96 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 14
+
+[node name="Sprite9" type="Sprite" parent="Node"]
+position = Vector2( -104, 96 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 16
+
+[node name="Menu" type="Node" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Menu"]
+position = Vector2( -376, 64 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+
+[node name="Sprite2" type="Sprite" parent="Menu"]
+position = Vector2( -360, 64 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 2
+
+[node name="Sprite3" type="Sprite" parent="Menu"]
+position = Vector2( -346, 64 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 4
+
+[node name="Sprite4" type="Sprite" parent="Menu"]
+position = Vector2( -376, 80 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 6
+
+[node name="Sprite5" type="Sprite" parent="Menu"]
+position = Vector2( -360, 80 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 8
+
+[node name="Sprite6" type="Sprite" parent="Menu"]
+position = Vector2( -346, 80 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 10
+
+[node name="Sprite7" type="Sprite" parent="Menu"]
+position = Vector2( -376, 96 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 12
+
+[node name="Sprite8" type="Sprite" parent="Menu"]
+position = Vector2( -360, 96 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 14
+
+[node name="Sprite9" type="Sprite" parent="Menu"]
+position = Vector2( -346, 96 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 4
+frame = 16
+
+[node name="Label" type="Label" parent="Menu"]
+margin_left = -474.0
+margin_top = 127.0
+margin_right = -242.0
+margin_bottom = 141.0
+custom_fonts/font = SubResource( 1 )
+text = "Press Anything to Start"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Menu"]
+margin_left = -476.742
+margin_top = 25.1675
+margin_right = -241.742
+margin_bottom = 87.1675
+custom_fonts/font = SubResource( 2 )
+text = "HAPPENING"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lava" type="Node" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Lava"]
+position = Vector2( 104, 64 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 4
+
+[node name="Sprite2" type="Sprite" parent="Lava"]
+position = Vector2( 120, 64 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 4
+frame = 2
+
+[node name="Sprite3" type="Sprite" parent="Lava"]
+position = Vector2( 136, 64 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 4
+frame = 4
+
+[node name="Sprite4" type="Sprite" parent="Lava"]
+position = Vector2( 104, 80 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 4
+frame = 6
+
+[node name="Sprite5" type="Sprite" parent="Lava"]
+position = Vector2( 120, 80 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 4
+frame = 8
+
+[node name="Sprite6" type="Sprite" parent="Lava"]
+position = Vector2( 136, 80 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 4
+frame = 10
+
+[node name="Sprite7" type="Sprite" parent="Lava"]
+position = Vector2( 104, 96 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 4
+frame = 12
+
+[node name="Sprite8" type="Sprite" parent="Lava"]
+position = Vector2( 120, 96 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 4
+frame = 14
+
+[node name="Sprite9" type="Sprite" parent="Lava"]
+position = Vector2( 136, 96 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 4
+frame = 16
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -240, 0 )
+current = true
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+anims/Move = SubResource( 3 )
+anims/Start = SubResource( 4 )
+anims/go_in = SubResource( 5 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -103.113
+margin_top = -68.5323
+margin_right = -63.1128
+margin_bottom = -54.5323
+custom_fonts/font = ExtResource( 3 )
+text = "In a distant planet... everything was fine... But 
+sudently a group of demons invaded the planet...
+Because I needed a story to this game..."
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = -98.1249
+margin_top = 40.9098
+margin_right = 110.875
+margin_bottom = 73.9098
+custom_fonts/font = ExtResource( 3 )
+text = "There was an angel that can take the demons bodies 
+But he needs to be careful, he only can take demons 
+bodies after the last demon body was destroyed"
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 137.232
+margin_top = -65.7659
+margin_right = 346.232
+margin_bottom = -32.7659
+custom_fonts/font = ExtResource( 3 )
+text = "Sudenly the planet start to shake and lava start to 
+take everything... You need to get find what it's 
+causing this..."
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 134.565
+margin_top = 39.4523
+margin_right = 354.565
+margin_bottom = 72.4523
+custom_fonts/font = ExtResource( 3 )
+text = "Just remember, you can jump in a UP key, you can 
+slide in DOWN key, you move RIGHT and LEFT in bosses 
+fight, you need to shoot in X and don't forget to run
+avoid enemies comming at you and chase the one runing"
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
